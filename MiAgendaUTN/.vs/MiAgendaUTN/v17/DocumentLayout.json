@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\users\\isaac\\desktop\\proyectomoviles\\miagendautn\\miagendautn\\miagendautn\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "MiAgendaUTN\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "MiAgendaUTN\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T00:40:42.694Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
