@@ -1,0 +1,87 @@
+﻿@using System.Text.Json
+@page "/agendar"
+
+<h1>Agendar mi nueva actividad</h1>
+
+<div class="form-container">
+    <EditForm Model="@nuevaActividad" OnValidSubmit="@GuardarActividad">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label>Título:</label>
+            <InputText @bind-Value="nuevaActividad.Titulo" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Descripción:</label>
+            <InputTextArea @bind-Value="nuevaActividad.Descripcion" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Fecha:</label>
+            <InputDate @bind-Value="nuevaActividad.Fecha" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label>Categoría / Etiqueta:</label>
+            <InputSelect @bind-Value="nuevaActividad.Categoria" class="form-control">
+                <option value="">-- Selecciona una categoría --</option>
+                <option>Trabajo</option>
+                <option>Estudio</option>
+                <option>Personal</option>
+                <option>Salud</option>
+                <option>Otro</option>
+            </InputSelect>
+        </div>
+
+        <button type="submit" class="btn-guardar">Guardar Actividad</button>
+    </EditForm>
+
+    @if (actividadGuardada)
+    {
+        <p class="mensaje-exito">✅ Actividad guardada correctamente</p>
+    }
+</div>
+
+@code {
+    private Actividad nuevaActividad = new();
+    private bool actividadGuardada = false;
+    private List<Actividad> listaActividades = new();
+
+    private string rutaArchivo = Path.Combine(FileSystem.AppDataDirectory, "actividades.json");
+
+    private async void GuardarActividad()
+    {
+        actividadGuardada = true;
+
+        // Cargar lista existente si hay archivo previo
+        if (File.Exists(rutaArchivo))
+        {
+            string jsonExistente = await File.ReadAllTextAsync(rutaArchivo);
+            listaActividades = JsonSerializer.Deserialize<List<Actividad>>(jsonExistente) ?? new();
+        }
+
+        // Agregar la nueva actividad
+        listaActividades.Add(nuevaActividad);
+
+        // Serializar a JSON y guardar
+        string json = JsonSerializer.Serialize(listaActividades, new JsonSerializerOptions { WriteIndented = true });
+        await File.WriteAllTextAsync(rutaArchivo, json);
+
+        Console.WriteLine($"✅ Actividad guardada: {nuevaActividad.Titulo}");
+        
+
+
+        // Limpiar campos
+        nuevaActividad = new();
+    }
+
+    public class Actividad
+    {
+        public string Titulo { get; set; } = string.Empty;
+        public string Descripcion { get; set; } = string.Empty;
+        public DateTime Fecha { get; set; } = DateTime.Today;
+        public string Categoria { get; set; } = string.Empty;
+    }
+}
