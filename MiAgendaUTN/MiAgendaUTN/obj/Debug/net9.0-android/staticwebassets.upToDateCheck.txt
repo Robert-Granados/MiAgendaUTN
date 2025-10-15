@@ -2,7 +2,7 @@ wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\index.html
-C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\app.css
-C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\bootstrap\bootstrap.min.css
-C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\bootstrap\bootstrap.min.css.map
-C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\index.html
+C:\Users\isaac\Desktop\ProyectoMoviles\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\index.html
+C:\Users\isaac\Desktop\ProyectoMoviles\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\bootstrap\bootstrap.min.css.map
+C:\Users\isaac\Desktop\ProyectoMoviles\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\bootstrap\bootstrap.min.css
+C:\Users\isaac\Desktop\ProyectoMoviles\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\app.css
