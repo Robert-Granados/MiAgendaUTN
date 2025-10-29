@@ -1,87 +1,81 @@
-﻿@page "/agendar"
-@using System.Text.Json
-@using System.ComponentModel.DataAnnotations
-@using MiAgendaUTN.ViewModels
+﻿@using System.Text.Json
+@page "/agendar"
 
-<EditForm EditContext="@editContext" OnValidSubmit="@GuardarActividad">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+<h1>Agendar mi nueva actividad</h1>
 
-    <div class="form-group">
-        <label>Título:</label>
-        <InputText @bind-Value="nuevaActividad.Titulo" class="form-control" />
-        <ValidationMessage For="@(() => nuevaActividad.Titulo)" />
-    </div>
+<div class="form-container">
+    <EditForm Model="@nuevaActividad" OnValidSubmit="@GuardarActividad">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
 
-    <div class="form-group">
-        <label>Descripción:</label>
-        <InputTextArea @bind-Value="nuevaActividad.Descripcion" class="form-control" />
-        <ValidationMessage For="@(() => nuevaActividad.Descripcion)" />
-    </div>
+        <div class="form-group">
+            <label>Título:</label>
+            <InputText @bind-Value="nuevaActividad.Titulo" class="form-control" />
+        </div>
 
-    <div class="form-group">
-        <label>Fecha:</label>
-        <InputDate @bind-Value="nuevaActividad.Fecha" class="form-control" />
-        <ValidationMessage For="@(() => nuevaActividad.Fecha)" />
-    </div>
+        <div class="form-group">
+            <label>Descripción:</label>
+            <InputTextArea @bind-Value="nuevaActividad.Descripcion" class="form-control" />
+        </div>
 
-    <div class="form-group">
-        <label>Categoría / Etiqueta:</label>
-        <InputSelect @bind-Value="nuevaActividad.Categoria" class="form-control">
-            <option value="">-- Selecciona una categoría --</option>
-            <option>Trabajo</option>
-            <option>Estudio</option>
-            <option>Personal</option>
-            <option>Salud</option>
-            <option>Otro</option>
-        </InputSelect>
-        <ValidationMessage For="@(() => nuevaActividad.Categoria)" />
-    </div>
+        <div class="form-group">
+            <label>Fecha:</label>
+            <InputDate @bind-Value="nuevaActividad.Fecha" class="form-control" />
+        </div>
 
-    <button type="submit" class="btn-guardar" disabled="@actividadGuardada">Guardar Actividad</button>
-</EditForm>
+        <div class="form-group">
+            <label>Categoría / Etiqueta:</label>
+            <InputSelect @bind-Value="nuevaActividad.Categoria" class="form-control">
+                <option value="">-- Selecciona una categoría --</option>
+                <option>Trabajo</option>
+                <option>Estudio</option>
+                <option>Personal</option>
+                <option>Salud</option>
+                <option>Otro</option>
+            </InputSelect>
+        </div>
 
-@if (actividadGuardada){
-    <p class="mensaje-exito">✅ Actividad guardada correctamente</p>
-}
+        <button type="submit" class="btn-guardar">Guardar Actividad</button>
+    </EditForm>
+
+    @if (actividadGuardada)
+    {
+        <p class="mensaje-exito">✅ Actividad guardada correctamente</p>
+    }
+</div>
 
 @code {
-    private ActivityModel nuevaActividad = new();
-    private EditContext editContext;
+    private Actividad nuevaActividad = new();
     private bool actividadGuardada = false;
-    private List<ActivityModel> listaActividades = new();
+    private List<Actividad> listaActividades = new();
 
     private string rutaArchivo = Path.Combine(FileSystem.AppDataDirectory, "actividades.json");
 
-    protected override void OnInitialized(){
-        editContext = new EditContext(nuevaActividad);
-    }
-
     private async void GuardarActividad()
     {
-        if (!editContext.Validate())
-        {
-            Console.WriteLine("❌ Formulario inválido.");
-            return;
-        }
+        actividadGuardada = true;
 
+        // Cargar lista existente si hay archivo previo
         if (File.Exists(rutaArchivo))
         {
             string jsonExistente = await File.ReadAllTextAsync(rutaArchivo);
-            listaActividades = JsonSerializer.Deserialize<List<ActivityModel>>(jsonExistente) ?? new();
+            listaActividades = JsonSerializer.Deserialize<List<Actividad>>(jsonExistente) ?? new();
         }
 
+        // Agregar la nueva actividad
         listaActividades.Add(nuevaActividad);
 
+        // Serializar a JSON y guardar
         string json = JsonSerializer.Serialize(listaActividades, new JsonSerializerOptions { WriteIndented = true });
         await File.WriteAllTextAsync(rutaArchivo, json);
 
-        actividadGuardada = true;
+        Console.WriteLine($"✅ Actividad guardada: {nuevaActividad.Titulo}");
+        
 
-   
-        await Task.Delay(50);
-        nuevaActividad = new ActivityModel();
-        editContext = new EditContext(nuevaActividad);
-        StateHasChanged();
+
+        // Limpiar campos
+        nuevaActividad = new();
     }
+
+    // Usa el modelo compartido en MiAgendaUTN/Models/Actividad.cs
 }
