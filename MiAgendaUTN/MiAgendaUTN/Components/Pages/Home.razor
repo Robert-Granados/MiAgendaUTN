@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using System.Text.Json
 @using Microsoft.Maui.Storage
+@inject MiAgendaUTN.Services.ActivitiesService Activities
 
 <div class="mobile-container">
     <!-- Header -->
@@ -64,6 +65,7 @@
                     <button class="btn-secondary" @onclick="Cancelar">
                         Cancelar
                     </button>
+                    @if (editando) { <button class="btn-primary" @onclick="CompletarActual">✅ Completar</button> }
                     <button class="btn-primary"
                             @onclick="GuardarActividad"
                             disabled="@(!CamposValidos)">
@@ -192,6 +194,7 @@
     private string mensaje = string.Empty;
     private string filtroCategoria = "";
     private Actividad? actividadAExportar = null;
+    private Actividad? actividadOriginalAlEditar = null;
 
     protected override async Task OnInitializedAsync()
     {
@@ -217,6 +220,7 @@
 
     private void EditarActividad(Actividad actividad)
     {
+        actividadOriginalAlEditar = actividad;
         actividadActual = new Actividad
         {
             Titulo = actividad.Titulo,
@@ -290,6 +294,34 @@
     private void CancelarEliminacion()
     {
         actividadAEliminar = null;
+    }
+
+    private async Task CompletarActual()
+    {
+        if (actividadOriginalAlEditar == null) return;
+        if (!File.Exists(rutaArchivo)) return;
+
+        var json = await File.ReadAllTextAsync(rutaArchivo);
+        var lista = JsonSerializer.Deserialize<List<Actividad>>(json) ?? new();
+        var idx = lista.FindIndex(x =>
+            x.Titulo == actividadOriginalAlEditar.Titulo &&
+            x.Fecha == actividadOriginalAlEditar.Fecha &&
+            x.Categoria == actividadOriginalAlEditar.Categoria &&
+            x.Descripcion == actividadOriginalAlEditar.Descripcion
+        );
+        if (idx >= 0)
+        {
+            lista[idx].Completada = true;
+            lista[idx].FechaCompletada = DateTime.Now;
+            var jsonOut = JsonSerializer.Serialize(lista, new JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync(rutaArchivo, jsonOut);
+        }
+
+        mostrarFormulario = false;
+        await CargarActividades();
+        mensaje = "✅ Actividad completada";
+        await Task.Delay(2000);
+        mensaje = string.Empty;
     }
 
     private void AplicarFiltro(string categoria)
