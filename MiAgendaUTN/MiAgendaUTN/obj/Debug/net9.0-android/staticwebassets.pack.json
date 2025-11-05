@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\MiAgendaUTN.styles.css",
+      "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\MiAgendaUTN.styles.css",
       "PackagePath": "staticwebassets\\MiAgendaUTN.styles.css"
     },
     {
-      "Id": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\css\\app.css",
+      "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\isaac\\Desktop\\ProyectoMoviles\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\index.html",
+      "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
