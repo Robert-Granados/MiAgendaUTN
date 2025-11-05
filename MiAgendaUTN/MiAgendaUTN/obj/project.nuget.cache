@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XuYXJQn+3yM=",
+  "dgSpecHash": "12bwVykXLFc=",
   "success": true,
-  "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
+  "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\documentformat.openxml.framework\\3.0.2\\documentformat.openxml.framework.3.0.2.nupkg.sha512",

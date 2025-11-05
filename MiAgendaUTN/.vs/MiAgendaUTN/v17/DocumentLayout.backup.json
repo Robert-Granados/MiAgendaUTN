@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\MiAgendaUTN\\MiAgendaUTN\\",
+  "WorkspaceRootPath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\components\\pages\\agendar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\components\\pages\\agendar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\miagendautn\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\services\\exportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\miagendautn\\services\\exportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\services\\exportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|c:\\miagendautn\\miagendautn\\miagendautn\\miagendautn\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42C6F33D-1E82-41B0-BD4F-7F44F33D1536}|MiAgendaUTN\\MiAgendaUTN.csproj|solutionrelative:miagendautn\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +30,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ExportService.cs",
-              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Services\\ExportService.cs",
+              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Services\\ExportService.cs",
               "RelativeDocumentMoniker": "MiAgendaUTN\\Services\\ExportService.cs",
-              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Services\\ExportService.cs",
+              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Services\\ExportService.cs",
               "RelativeToolTip": "MiAgendaUTN\\Services\\ExportService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T03:36:28.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T03:36:28.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T02:27:08.336Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Agendar.razor",
-              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Agendar.razor",
-              "RelativeDocumentMoniker": "MiAgendaUTN\\Components\\Pages\\Agendar.razor",
-              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Agendar.razor",
-              "RelativeToolTip": "MiAgendaUTN\\Components\\Pages\\Agendar.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-10T02:29:49.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "MiAgendaUTN\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-10T02:27:08.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Home.razor",
-              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Home.razor",
+              "DocumentMoniker": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "MiAgendaUTN\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "MiAgendaUTN\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAAAAYBAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-06T00:40:42.694Z",
               "EditorCaption": ""
