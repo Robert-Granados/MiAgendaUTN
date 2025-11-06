@@ -2,6 +2,7 @@ wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\index.html
+wwwroot\images\UTN.png
 C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\app.css
 C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\bootstrap\bootstrap.min.css
 C:\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\MiAgendaUTN\wwwroot\css\bootstrap\bootstrap.min.css.map
