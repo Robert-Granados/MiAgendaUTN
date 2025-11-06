@@ -1,18 +1,11 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "S2p+GxO0uV8=",
-  "success": true,
-  "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
-  "expectedPackageFiles": [
-=======
-  "dgSpecHash": "12bwVykXLFc=",
+  "dgSpecHash": "bgzt9iy1SdM=",
   "success": true,
   "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\documentformat.openxml.framework\\3.0.2\\documentformat.openxml.framework.3.0.2.nupkg.sha512",
->>>>>>> origin/Robert
     "C:\\Users\\rober\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.5\\microsoft.aspnetcore.authorization.9.0.5.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.5\\microsoft.aspnetcore.components.9.0.5.nupkg.sha512",
@@ -55,11 +48,8 @@
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250513003\\microsoft.windowsappsdk.1.7.250513003.nupkg.sha512",
-<<<<<<< HEAD
-=======
     "C:\\Users\\rober\\.nuget\\packages\\questpdf\\2024.10.0\\questpdf.2024.10.0.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
->>>>>>> origin/Robert
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.android.glide\\4.16.0.12\\xamarin.android.glide.4.16.0.12.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.12\\xamarin.android.glide.annotations.4.16.0.12.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.12\\xamarin.android.glide.disklrucache.4.16.0.12.nupkg.sha512",
@@ -148,8 +138,17 @@
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.coroutines.core\\1.9.0.3\\xamarin.kotlinx.coroutines.core.1.9.0.3.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.9.0.3\\xamarin.kotlinx.coroutines.core.jvm.1.9.0.3.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.7.3.4\\xamarin.kotlinx.serialization.core.1.7.3.4.nupkg.sha512",
-    "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.4\\xamarin.kotlinx.serialization.core.jvm.1.7.3.4.nupkg.sha512",
-    "C:\\Users\\rober\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
+    "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.4\\xamarin.kotlinx.serialization.core.jvm.1.7.3.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
