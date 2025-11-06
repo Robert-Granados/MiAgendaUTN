@@ -33,11 +33,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Descripción</label>
+                    <label>Descripción *</label>
                     <textarea class="form-textarea"
                               @bind="actividadActual.Descripcion"
                               placeholder="Detalles..."
                               rows="3"></textarea>
+                    @if (string.IsNullOrWhiteSpace(actividadActual.Descripcion))
+                    {
+                        <div class="error-message">La descripción es obligatoria.</div>
+                    }
                 </div>
 
                 <div class="form-group">
@@ -180,7 +184,7 @@
         if (File.Exists(rutaArchivo))
         {
             string json = await File.ReadAllTextAsync(rutaArchivo);
-            listaActividades = JsonSerializer.Deserialize<List<Actividad>>(json) ?? new();
+            listaActividades = JsonSerializer.Deserialize<List<Actividad>>(json) ?? new List<Actividad>();
             AplicarFiltro(filtroCategoria);
         }
     }
@@ -305,6 +309,7 @@
 
     private bool CamposValidos =>
         !string.IsNullOrWhiteSpace(actividadActual.Titulo) &&
+        !string.IsNullOrWhiteSpace(actividadActual.Descripcion) &&
         actividadActual.Fecha != default;
 
     public class Actividad
@@ -315,6 +320,7 @@
         public string Categoria { get; set; } = string.Empty;
     }
 }
+
 
 <style>
     /* Estilos móviles */
