@@ -355,6 +355,7 @@
         font-size: 1.5rem;
         cursor: pointer;
         box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+        transition: transform 0.3s ease; /* Añadir una transición de escala */
     }
 
     .activities-list {
@@ -364,11 +365,12 @@
     }
 
     .activity-card {
-        background: white;
+        background: #f9f9f9; /* Fondo más claro para las tarjetas */
         border-radius: 12px;
         padding: 16px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra más suave */
         border-left: 4px solid #007bff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el hover */
     }
 
     .activity-card.past {
@@ -385,8 +387,9 @@
 
     .activity-title {
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #333;
+        font-family: 'Poppins', sans-serif;
     }
 
     .activity-date {
@@ -452,6 +455,7 @@
         max-width: 400px;
         max-height: 90vh;
         overflow-y: auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
     }
 
     .form-group {
@@ -489,6 +493,7 @@
         border-radius: 8px;
         font-size: 1rem;
         cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
     .btn-primary:disabled {
@@ -505,6 +510,7 @@
         border-radius: 8px;
         font-size: 1rem;
         cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
     /* Filtros */
@@ -524,6 +530,7 @@
         font-size: 0.9rem;
         white-space: nowrap;
         cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
     .filter-chip.active {
