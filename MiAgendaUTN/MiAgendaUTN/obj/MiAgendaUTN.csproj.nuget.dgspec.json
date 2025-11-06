@@ -67,6 +67,10 @@
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[9.0.82, )"
@@ -84,6 +88,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
             }
           },
           "imports": [
@@ -110,6 +118,10 @@
         "net9.0-ios18.5": {
           "targetAlias": "net9.0-ios",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[9.0.82, )"
@@ -127,6 +139,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
             }
           },
           "imports": [
@@ -153,6 +169,10 @@
         "net9.0-maccatalyst18.5": {
           "targetAlias": "net9.0-maccatalyst",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[9.0.82, )"
@@ -170,6 +190,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
             }
           },
           "imports": [
@@ -197,6 +221,10 @@
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[9.0.82, )"
@@ -208,6 +236,10 @@
             "Microsoft.Maui.Controls": {
               "target": "Package",
               "version": "[9.0.82, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
             }
           },
           "imports": [

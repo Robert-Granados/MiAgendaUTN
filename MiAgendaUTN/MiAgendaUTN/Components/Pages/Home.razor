@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using System.Text.Json
 @using Microsoft.Maui.Storage
+@inject MiAgendaUTN.Services.ActivitiesService Activities
 
 <div class="mobile-container">
     <!-- Header -->
@@ -64,6 +65,7 @@
                     <button class="btn-secondary" @onclick="Cancelar">
                         Cancelar
                     </button>
+                    @if (editando) { <button class="btn-primary" @onclick="CompletarActual">✅ Completar</button> }
                     <button class="btn-primary"
                             @onclick="GuardarActividad"
                             disabled="@(!CamposValidos)">
@@ -123,6 +125,11 @@
                         </span>
                         <div class="activity-actions">
                             <button class="btn-icon"
+                                    @onclick="() => AbrirModalExportar(actividad)"
+                                    title="Exportar">
+                                📤
+                            </button>
+                            <button class="btn-icon"
                                     @onclick="() => EditarActividad(actividad)"
                                     title="Editar">
                                 ✏️
@@ -144,8 +151,8 @@
     {
         <div class="modal-overlay">
             <div class="modal-container">
-                <h3>¿Eliminar actividad?</h3>
-                <p>¿Estás seguro de que quieres eliminar "@actividadAEliminar.Titulo"?</p>
+                <h3>¿Eliminar esta actividad?</h3>
+                <p>¿Estás seguro de que que desea eliminar "@actividadAEliminar.Titulo"?</p>
                 <div class="modal-buttons">
                     <button class="btn-secondary" @onclick="CancelarEliminacion">
                         Cancelar
@@ -153,6 +160,22 @@
                     <button class="btn-danger" @onclick="ConfirmarEliminacion">
                         🗑️ Eliminar
                     </button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (mostrarExportar && actividadAExportar != null)
+    {
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <h3>Exportar "@actividadAExportar.Titulo" como...</h3>
+                <div class="modal-buttons">
+                    <button class="btn-primary" @onclick='() => ExportarSeleccion("pdf")'>PDF</button>
+                    <button class="btn-secondary" @onclick='() => ExportarSeleccion("docx")'>DOCX</button>
+                </div>
+                <div class="modal-buttons" style="margin-top:12px">
+                    <button class="btn-secondary" @onclick="CancelarExportacion">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -167,8 +190,11 @@
     private Actividad? actividadAEliminar = null;
     private bool editando = false;
     private bool mostrarFormulario = false;
+    private bool mostrarExportar = false;
     private string mensaje = string.Empty;
     private string filtroCategoria = "";
+    private Actividad? actividadAExportar = null;
+    private Actividad? actividadOriginalAlEditar = null;
 
     protected override async Task OnInitializedAsync()
     {
@@ -194,6 +220,7 @@
 
     private void EditarActividad(Actividad actividad)
     {
+        actividadOriginalAlEditar = actividad;
         actividadActual = new Actividad
         {
             Titulo = actividad.Titulo,
@@ -245,6 +272,12 @@
         actividadAEliminar = actividad;
     }
 
+    private void AbrirModalExportar(Actividad actividad)
+    {
+        actividadAExportar = actividad;
+        mostrarExportar = true;
+    }
+
     private async Task ConfirmarEliminacion()
     {
         if (actividadAEliminar != null && listaActividades.Remove(actividadAEliminar))
@@ -261,6 +294,34 @@
     private void CancelarEliminacion()
     {
         actividadAEliminar = null;
+    }
+
+    private async Task CompletarActual()
+    {
+        if (actividadOriginalAlEditar == null) return;
+        if (!File.Exists(rutaArchivo)) return;
+
+        var json = await File.ReadAllTextAsync(rutaArchivo);
+        var lista = JsonSerializer.Deserialize<List<Actividad>>(json) ?? new();
+        var idx = lista.FindIndex(x =>
+            x.Titulo == actividadOriginalAlEditar.Titulo &&
+            x.Fecha == actividadOriginalAlEditar.Fecha &&
+            x.Categoria == actividadOriginalAlEditar.Categoria &&
+            x.Descripcion == actividadOriginalAlEditar.Descripcion
+        );
+        if (idx >= 0)
+        {
+            lista[idx].Completada = true;
+            lista[idx].FechaCompletada = DateTime.Now;
+            var jsonOut = JsonSerializer.Serialize(lista, new JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync(rutaArchivo, jsonOut);
+        }
+
+        mostrarFormulario = false;
+        await CargarActividades();
+        mensaje = "✅ Actividad completada";
+        await Task.Delay(2000);
+        mensaje = string.Empty;
     }
 
     private void AplicarFiltro(string categoria)
@@ -307,12 +368,32 @@
         !string.IsNullOrWhiteSpace(actividadActual.Titulo) &&
         actividadActual.Fecha != default;
 
-    public class Actividad
+    private async Task ExportarSeleccion(string formato)
     {
-        public string Titulo { get; set; } = string.Empty;
-        public string Descripcion { get; set; } = string.Empty;
-        public DateTime Fecha { get; set; }
-        public string Categoria { get; set; } = string.Empty;
+        if (actividadAExportar is null) return;
+        try
+        {
+            var exporter = new MiAgendaUTN.Services.ExportService();
+            await exporter.ExportAsync(actividadAExportar, formato);
+            mensaje = $"✅ Exportado como {formato.ToUpper()}";
+        }
+        catch (Exception ex)
+        {
+            mensaje = $"❌ Error al exportar: {ex.Message}";
+        }
+        finally
+        {
+            mostrarExportar = false;
+            actividadAExportar = null;
+            await Task.Delay(3000);
+            mensaje = string.Empty;
+        }
+    }
+
+    private void CancelarExportacion()
+    {
+        mostrarExportar = false;
+        actividadAExportar = null;
     }
 }
 

@@ -1,0 +1,99 @@
+@page "/completadas"
+@using MiAgendaUTN.Models
+@inject MiAgendaUTN.Services.ActivitiesService Activities
+@using MiAgendaUTN.ViewModels
+
+<div class="mobile-container">
+    <div class="mobile-header">
+        <h1>✅ Completadas</h1>
+    </div>
+
+    @if (!string.IsNullOrEmpty(mensaje))
+    {
+        <div class="alert-mobile">@mensaje</div>
+    }
+
+    @if (vm.Items.Count == 0)
+    {
+        <div class="empty-state">
+            <div class="empty-icon">🗂️</div>
+            <h3>No hay tareas completadas</h3>
+            <p>Marca actividades como completadas desde la edición.</p>
+        </div>
+    }
+    else
+    {
+        <div class="activities-list">
+            @foreach (var a in vm.Items)
+            {
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <span class="activity-title">@a.Titulo</span>
+                        <span class="activity-date">@((a.FechaCompletada ?? a.Fecha).ToString("dd MMM yyyy"))</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(a.Descripcion))
+                    {
+                        <div class="activity-desc">@a.Descripcion</div>
+                    }
+                    <div class="activity-footer">
+                        <span class="activity-category">@a.Categoria</span>
+                        <div class="activity-actions">
+                            <button class="btn-icon" title="Restaurar" @onclick="() => Restaurar(a)">↩️</button>
+                            <button class="btn-icon delete" title="Eliminar" @onclick="() => Eliminar(a)">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private CompletadasViewModel vm = default!;
+    private string mensaje = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        vm = new CompletadasViewModel(Activities);
+        await vm.CargarAsync();
+    }
+
+    private async Task Restaurar(Actividad a)
+    {
+        await vm.RestaurarAsync(a);
+        await vm.CargarAsync();
+        mensaje = "↩️ Restaurada a pendientes";
+        await Task.Delay(2000);
+        mensaje = string.Empty;
+    }
+
+    private async Task Eliminar(Actividad a)
+    {
+        await vm.EliminarAsync(a);
+        await vm.CargarAsync();
+        mensaje = "🗑️ Eliminada";
+        await Task.Delay(2000);
+        mensaje = string.Empty;
+    }
+}
+
+<style>
+    .activities-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .activity-card {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
+        padding: 14px;
+    }
+    .activity-header { display:flex; justify-content:space-between; }
+    .activity-title { font-weight:600; }
+    .activity-desc { color:#666; margin:8px 0; }
+    .activity-footer { display:flex; justify-content:space-between; align-items:center; }
+    .activity-actions { display:flex; gap:8px; }
+    .btn-icon { background:none; border:none; cursor:pointer; font-size:1.1rem; }
+    .btn-icon.delete { color:#dc3545; }
+</style>

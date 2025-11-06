@@ -1,9 +1,18 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "S2p+GxO0uV8=",
   "success": true,
   "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
   "expectedPackageFiles": [
+=======
+  "dgSpecHash": "12bwVykXLFc=",
+  "success": true,
+  "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rober\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\documentformat.openxml.framework\\3.0.2\\documentformat.openxml.framework.3.0.2.nupkg.sha512",
+>>>>>>> origin/Robert
     "C:\\Users\\rober\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.5\\microsoft.aspnetcore.authorization.9.0.5.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.5\\microsoft.aspnetcore.components.9.0.5.nupkg.sha512",
@@ -46,6 +55,11 @@
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250513003\\microsoft.windowsappsdk.1.7.250513003.nupkg.sha512",
+<<<<<<< HEAD
+=======
+    "C:\\Users\\rober\\.nuget\\packages\\questpdf\\2024.10.0\\questpdf.2024.10.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
+>>>>>>> origin/Robert
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.android.glide\\4.16.0.12\\xamarin.android.glide.4.16.0.12.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.12\\xamarin.android.glide.annotations.4.16.0.12.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.12\\xamarin.android.glide.disklrucache.4.16.0.12.nupkg.sha512",

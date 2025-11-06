@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiAgendaUTN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d18f7596e17994f9f6eb14896888a645421858d5")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+52f8cfce9ad3b6d259e1a05f7c4ed96ff578b7c7")]
+>>>>>>> origin/Robert
 [assembly: System.Reflection.AssemblyProductAttribute("MiAgendaUTN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiAgendaUTN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
