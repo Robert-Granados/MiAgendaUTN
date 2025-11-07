@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bgzt9iy1SdM=",
+  "dgSpecHash": "/5rC5pHx8Ic=",
   "success": true,
   "projectFilePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
   "expectedPackageFiles": [
@@ -138,17 +138,12 @@
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.coroutines.core\\1.9.0.3\\xamarin.kotlinx.coroutines.core.1.9.0.3.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.9.0.3\\xamarin.kotlinx.coroutines.core.jvm.1.9.0.3.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.7.3.4\\xamarin.kotlinx.serialization.core.1.7.3.4.nupkg.sha512",
-    "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.4\\xamarin.kotlinx.serialization.core.jvm.1.7.3.4.nupkg.sha512"
+    "C:\\Users\\rober\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.7.3.4\\xamarin.kotlinx.serialization.core.jvm.1.7.3.4.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\9.0.9\\microsoft.netcore.app.crossgen2.win-x64.9.0.9.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.9\\microsoft.aspnetcore.app.runtime.win-x64.9.0.9.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.9\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.9.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.9\\microsoft.netcore.app.runtime.win-x64.9.0.9.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problema al leer el archivo de caché C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

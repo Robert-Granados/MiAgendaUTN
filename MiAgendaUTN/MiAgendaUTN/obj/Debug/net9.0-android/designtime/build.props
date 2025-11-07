@@ -24,11 +24,7 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-<<<<<<< HEAD
-_nugetassetsfilehash=1da4a2c93964a72a73be01d4a67fc4915e440d31d2796dee03cd7daf746f7bba
-=======
-_nugetassetsfilehash=e6cefcaee1c69723c402e99b8028c7eb9c26fd793b32da3ebfed75838f07b4c4
->>>>>>> origin/Robert
+_nugetassetsfilehash=acb56f96558b3403e90e24d1e03c96794eb444e2aa3a8856f454465e94513a16
 typemapkind=strings-asm
 androidmanifestplaceholders=
 projectfullpath=c:\miagendautn\miagendautn\miagendautn\miagendautn\miagendautn.csproj
