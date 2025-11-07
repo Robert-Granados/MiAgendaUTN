@@ -45,11 +45,7 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZ2VuZGFyLnJh
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
-[C:/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/Components/Pages/Counter.razor]
-=======
 [C:/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/Components/Pages/Completadas.razor]
->>>>>>> origin/Robert
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wbGV0YWRhcy5yYXpvcg==
@@ -63,16 +59,6 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
-[C:/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.GenKind = 
-build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
-build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = 
-
-=======
->>>>>>> origin/Robert
 [C:/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/MiAgendaUTN/Components/Routes.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
