@@ -15,6 +15,7 @@ namespace MiAgendaUTN
                 });
 
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddSingleton<MiAgendaUTN.Services.ActivitiesService>();
 
 #if DEBUG
     		builder.Services.AddBlazorWebViewDeveloperTools();

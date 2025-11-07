@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\images\\UTN.png",
-      "PackagePath": "staticwebassets\\images\\UTN.png"
-    },
-    {
       "Id": "C:\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\MiAgendaUTN\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

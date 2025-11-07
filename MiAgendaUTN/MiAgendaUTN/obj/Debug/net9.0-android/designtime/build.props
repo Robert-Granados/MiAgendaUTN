@@ -13,7 +13,7 @@ androidlinkskip=
 androidsdkbuildtoolsversion=35.0.0
 androidsdkpath=c:\program files (x86)\android\android-sdk\
 androidndkpath=
-javasdkpath=c:\program files (x86)\android\openjdk\jdk-17.0.14\
+javasdkpath=c:\program files\java\jdk-21\
 androidsequencepointsmode=none
 androidnetsdkversion=35.0.78
 monosymbolarchive=false
@@ -24,7 +24,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetsfilehash=263b46497405fe6cc71c9f890690c09cd8485f5705d57ceafebbb129856b1862
+<<<<<<< HEAD
+_nugetassetsfilehash=1da4a2c93964a72a73be01d4a67fc4915e440d31d2796dee03cd7daf746f7bba
+=======
+_nugetassetsfilehash=e6cefcaee1c69723c402e99b8028c7eb9c26fd793b32da3ebfed75838f07b4c4
+>>>>>>> origin/Robert
 typemapkind=strings-asm
 androidmanifestplaceholders=
 projectfullpath=c:\miagendautn\miagendautn\miagendautn\miagendautn\miagendautn.csproj

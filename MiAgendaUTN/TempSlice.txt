@@ -1,0 +1,5 @@
+                            <button class="btn-icon"
+                                    @onclick="() => EditarActividad(actividad)"
+                                    title="Exportar">
+                                📤
+                            </button>

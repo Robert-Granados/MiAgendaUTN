@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiAgendaUTN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+86266c553b3c5c6a1f4149a3c636dbcc37786d02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+749877d27b2e0a683b7fb59f573806070b4411e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiAgendaUTN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiAgendaUTN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
