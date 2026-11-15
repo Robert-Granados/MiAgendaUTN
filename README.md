@@ -1,5 +1,11 @@
 # MiAgendaUTN
 
+<!-- local-development:start -->
+## Desarrollo local
+
+Consulta [RUNNING.md](RUNNING.md) para ubicar cada componente, abrirlo en su IDE, compilarlo y conocer las comprobaciones realizadas y los requisitos pendientes.
+<!-- local-development:end -->
+
 Guía para compilar e ejecutar el proyecto. MiAgendaUTN es una app .NET MAUI (Blazor Hybrid) que corre en Windows y Android.
 
 ## Requisitos
@@ -51,4 +57,3 @@ En Visual Studio: abrir `MiAgendaUTN.sln`, seleccionar la plataforma (Windows/An
 
 - Las dependencias NuGet se restauran automáticamente con `dotnet restore`/`build`.
 - Para desarrollo con Hot Reload y depuración, se usó Visual Studio 2022 con la carga de trabajo de MAUI.
-
