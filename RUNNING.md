@@ -1,31 +1,29 @@
+# Compilar Android localmente
 
-
-<!-- local-development:start -->
-# Desarrollo local
-
-Puedes abrir este repositorio en VS Code, Antigravity o Sublime Text. El compilador y los servicios necesarios dependen del componente indicado abajo.
-
-## .NET SDK
-
-Instala el SDK correspondiente al destino de la tabla. .NET 8 y 9 finalizaron soporte el 2026-11-10; compilar con ellos no acredita un runtime con soporte para producción. .NET 10 requiere Visual Studio 2026 para trabajar desde ese IDE; la CLI puede usarse desde VS Code.
+Requiere Visual Studio 2022 actualizado con .NET MAUI/Android, SDK .NET 9 y las cargas de trabajo Android compatibles. Abre `MiAgendaUTN/MiAgendaUTN/MiAgendaUTN.csproj` en Visual Studio o usa la terminal de VS Code/Antigravity.
 
 ```powershell
-dotnet --list-sdks
-dotnet build 'MiAgendaUTN/MiAgendaUTN/MiAgendaUTN.csproj'
+.\build-android.ps1
 ```
 
-[.NET support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core) · [SDK / Visual Studio compatibility](https://learn.microsoft.com/en-us/dotnet/core/porting/versioning-sdk-msbuild-vs)
+El script restaura y compila Debug exclusivamente para `net9.0-android`. No intenta compilar iOS/MacCatalyst/Tizen ni instalar nada en un dispositivo. La aplicación puede probarse desde Visual Studio seleccionando un emulador o dispositivo Android; el SDK y el emulador pueden administrarse con Android Studio.
 
-## Componentes y validación
+El APK de prueba firmado se genera junto al proyecto, en `bin/Debug/net9.0-android/`, con nombre terminado en `-Signed.apk`. Para un emulador usa el APK universal o el correspondiente a su arquitectura; para un teléfono usa la arquitectura adecuada. Las claves de firma Debug son locales y no sirven para publicar una versión de producción.
 
-Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no acredita todavía interacción, compatibilidad de base de datos, instalador ni despliegue.
+Se comprobaron compilación, firma APK y alineación ZIP de 16 KB. El APK fue instalado y arrancó en un emulador AOSP Android 14/API 34 x86_64 nuevo, en modo avión. No se probaron dispositivos reales, Android con páginas de memoria de 16 KB ni las otras plataformas. Quedan pendientes los flujos completos de interfaz y datos. Los destinos .NET/MAUI conservados requieren otra migración antes de uso en producción; consulta la [política de soporte](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core).
 
-| Componente | Tipo / destino | Validación |
-| --- | --- | --- |
-| [MiAgendaUTN/MiAgendaUTN.sln](<MiAgendaUTN/MiAgendaUTN.sln>) | solution | Sin ejecutar |
-| [MiAgendaUTN/MiAgendaUTN/MiAgendaUTN.csproj](<MiAgendaUTN/MiAgendaUTN/MiAgendaUTN.csproj>) | dotnet / net9.0-android;net9.0-ios;net9.0-maccatalyst, $(TargetFrameworks);net9.0-tizen | Compila; prueba funcional pendiente |
+Los cambios permanecen en una rama de revisión con PR; no se integran en la principal de UTN. `.gitignore` excluye salidas y claves/configuración local.
 
-## Archivos ignorados
+## Exportación Android recuperada
 
-`.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
-<!-- local-development:end -->
+Android utiliza ahora `Android.Graphics.Pdf.PdfDocument`, con división de líneas y páginas, en vez de cargar los binarios nativos de escritorio de QuestPDF. QuestPDF se conserva para las otras plataformas, que no se probaron. El APK Debug incluye sus ensamblados para poder instalarse sin Fast Deployment de Visual Studio.
+
+La prueba Debug generó un PDF de 11 páginas con acentos y descripción larga, lo abrió con PdfRenderer y renderizó su primera página. También generó un DOCX validado con OpenXmlValidator y comprobó que conserva el título. No se abrió el panel de compartir ni se probaron todos los formatos/dispositivos. La prueba no agrega actividades a la agenda.
+
+Con el APK Debug instalado en un emulador propio:
+
+```powershell
+.\test-android.ps1 -Serial emulator-5580
+```
+
+Los archivos de la prueba se guardan en `cache/compatibility-smoke` dentro de la aplicación. La entrada de comprobación se compila únicamente en Debug; Release no la contiene.

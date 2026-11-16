@@ -54,3 +54,7 @@ local.properties
 *.iml
 .local-build/
 # local-development:end
+
+**/bin/
+
+**/obj/

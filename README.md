@@ -57,3 +57,9 @@ En Visual Studio: abrir `MiAgendaUTN.sln`, seleccionar la plataforma (Windows/An
 
 - Las dependencias NuGet se restauran automáticamente con `dotnet restore`/`build`.
 - Para desarrollo con Hot Reload y depuración, se usó Visual Studio 2022 con la carga de trabajo de MAUI.
+
+<!-- verified-android:start -->
+## Compilación Android
+
+Usa `build-android.ps1` y consulta [RUNNING.md](RUNNING.md) para generar el APK de prueba y abrirlo desde Visual Studio. Las otras plataformas y la ejecución en dispositivo siguen pendientes.
+<!-- verified-android:end -->

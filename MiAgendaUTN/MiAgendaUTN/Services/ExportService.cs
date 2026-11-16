@@ -2,16 +2,18 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using MiAgendaUTN.Models;
+#if !ANDROID
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
 // usar alias para evitar conflictos de nombres
-using WordDocument = DocumentFormat.OpenXml.Wordprocessing.Document;
 using QuestPdfDocument = QuestPDF.Fluent.Document;
 
 // Usar alias para colores de QuestPDF 
 using QuestColors = QuestPDF.Helpers.Colors;
+#endif
+using WordDocument = DocumentFormat.OpenXml.Wordprocessing.Document;
 
 namespace MiAgendaUTN.Services;
 
@@ -60,8 +62,11 @@ public class ExportService
         return path;
     }
 
-    private static byte[] GeneratePdf(Actividad a)
+    internal static byte[] GeneratePdf(Actividad a)
     {
+#if ANDROID
+        return AndroidPdfExporter.Generate(a);
+#else
         QuestPDF.Settings.License = LicenseType.Community;
 
         using var stream = new MemoryStream();
@@ -85,7 +90,7 @@ public class ExportService
                         col.Item().Text($"Categoría: {a.Categoria}");
 
                     col.Item().Text("Descripción:").SemiBold();
-                    col.Item().Text(string.IsNullOrWhiteSpace(a.Descripcion) ? "(Sin descripción)" : a.Descripcion).WrapAnywhere();
+                    col.Item().Text(string.IsNullOrWhiteSpace(a.Descripcion) ? "(Sin descripción)" : a.Descripcion);
                 });
 
                 page.Footer().AlignRight().Text($"Generado {DateTime.Now:g}").FontSize(9).FontColor(QuestColors.Grey.Medium);
@@ -93,9 +98,10 @@ public class ExportService
         }).GeneratePdf(stream);
 
         return stream.ToArray();
+#endif
     }
 
-    private static byte[] GenerateDocx(Actividad a)
+    internal static byte[] GenerateDocx(Actividad a)
     {
         using var mem = new MemoryStream();
         using (var doc = WordprocessingDocument.Create(mem, WordprocessingDocumentType.Document, true))
